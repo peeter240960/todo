@@ -4,9 +4,8 @@ import { ITodo, TodoType } from "../common/types";
 
 function TodoItem({
   onClick,
-  types,
   ...item
-}: ITodo & { onClick: (item: ITodo) => void; types: "A" | "B" }) {
+}: ITodo & { onClick: (item: ITodo) => void }) {
   return (
     <button
       key={item.name}
@@ -68,12 +67,7 @@ function TodoContent(props: TodoContentProps) {
         <div className="space-y-2">
           {items.map((item) =>
             item.grouped === false ? (
-              <TodoItem
-                types="A"
-                key={item.name}
-                onClick={moveToGrouped}
-                {...item}
-              />
+              <TodoItem key={item.name} onClick={moveToGrouped} {...item} />
             ) : (
               <React.Fragment key={item.name}></React.Fragment>
             )
@@ -90,7 +84,6 @@ function TodoContent(props: TodoContentProps) {
             {items.map((item) =>
               item.type === key && item.grouped ? (
                 <TodoItem
-                  types="B"
                   key={item.name}
                   onClick={immediatelyMoveToUngrouped}
                   {...item}
