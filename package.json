@@ -2,6 +2,7 @@
   "name": "todo",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://peeter240960.github.io/todo/",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
