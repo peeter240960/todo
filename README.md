@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js 15 Todo Application
 
-## Getting Started
+A modern Todo application built with Next.js 15 using the App Router architecture, featuring a clean feature-based structure and TypeScript support.
 
-First, run the development server:
+## 🚀 Technology Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Architecture**: Feature-based modular structure
+
+## 📁 Project Structure
+
+```
+src/
+├── app/                    # Next.js 15 App Router directory
+│   ├── favicon.ico        # Application favicon
+│   ├── globals.css        # Global CSS styles
+│   ├── layout.tsx         # Root layout component
+│   └── page.tsx           # Home page component
+├── components/            # Reusable UI components
+├── features/              # Feature-based modules
+│   ├── common/           # Shared feature utilities
+│   │   ├── mock.ts       # Mock data and utilities
+│   │   └── types.ts      # Shared model types
+│   └── todo/             # Todo feature module
+│       ├── index.ts      # Feature exports
+│       ├── todo.container.tsx  # Todo container component
+│       ├── todo.content.tsx    # Todo content component
+│       └── todo.types.tsx      # Todo component types
+├── functions/            # Utility functions and helpers
+└── services/            # API services and external integrations
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🏗️ Architecture Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### App Router (Next.js 15)
+This project utilizes Next.js 15's App Router, which provides:
+- File-based routing with enhanced features
+- Server and Client Components
+- Improved performance and developer experience
+- Built-in TypeScript support
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Feature-Based Architecture
+The application follows a feature-based structure where:
+- Each feature is self-contained in its own directory
+- Common utilities are shared across features
+- Clean separation of concerns between features
 
-## Learn More
+### Component Structure
+- **Containers**: Handle business logic and state management
+- **Content**: Handle presentation and UI rendering
+- **Types**: TypeScript definitions for type safety
 
-To learn more about Next.js, take a look at the following resources:
+## 🚦 Getting Started
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Prerequisites
+- Node.js v22.15.0 
+- pnpm
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Installation
 
-## Deploy on Vercel
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd <project-name>
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. Install dependencies:
+```bash
+corepack enable pnpm
+pnpm install
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. Run the development server:
+```bash
+pnpm dev
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
